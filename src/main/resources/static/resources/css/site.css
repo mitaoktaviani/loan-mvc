@@ -222,7 +222,7 @@ html {
 .upsert-form tr td:first-child {
     padding-right: 20px;
 }
-[type=text], select, [type=date], [type=tel], [type=email], [type=number], [type=datetime-local] {
+[type=text], select, [type=date], [type=tel], [type=email], [type=number], [type=datetime-local], [type=password]{
     border: none;
     outline: none;
     color: #56a7a7;

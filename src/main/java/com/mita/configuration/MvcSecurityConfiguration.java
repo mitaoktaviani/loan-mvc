@@ -19,6 +19,7 @@ public class MvcSecurityConfiguration {
         http.authorizeRequests()
                 .antMatchers("/resources/**", "/account/**").permitAll()
                 .antMatchers("/product/index").hasAnyAuthority("Creditor","Debtor")
+                .antMatchers("/creditor/**").hasAuthority("Super Admin")
                 .anyRequest().authenticated()
                 .and().formLogin()
                 .loginPage("/account/loginForm")

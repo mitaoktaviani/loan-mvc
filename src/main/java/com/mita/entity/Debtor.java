@@ -42,7 +42,7 @@ public class Debtor {
     @Column(name = "Professions")
     private String professions;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "Username")
     private Account account;
 

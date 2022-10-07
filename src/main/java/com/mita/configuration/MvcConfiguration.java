@@ -11,5 +11,6 @@ public class MvcConfiguration implements WebMvcConfigurer {
         registry.addViewController("/").setViewName("forward:/home/index");
         registry.addViewController("/home").setViewName("forward:/home/index");
         registry.addViewController("/product").setViewName("forward:/product/index");
+        registry.addViewController("/creditor").setViewName("forward:/creditor/index");
     }
 }

@@ -27,7 +27,7 @@ public class Creditor {
     @Column(name = "LastName")
     private String lastName;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "Username")
     private Account account;
 

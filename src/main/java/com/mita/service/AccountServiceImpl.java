@@ -25,4 +25,11 @@ public class AccountServiceImpl implements AccountService, UserDetailsService {
         Account account = nullableEntity.get();
         return new ApplicationUserDetails(account);
     }
+
+    @Override
+    public boolean checkExistingAccount(String username) {
+        Long totalUser = accountRepository.countUsername(username);
+
+        return (totalUser > 0) ? true : false;
+    }
 }
